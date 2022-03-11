@@ -1,0 +1,31 @@
+import { mergeProps, mapStateToProps } from './connect';
+
+describe('{{ name }} connect', () => {
+  describe('mapStateToProps', () => {
+    let stateProps;
+
+    beforeEach(() => {
+      stateProps = mapStateToProps({});
+    });
+
+    it('generates the correct props', () => {
+      expect(stateProps).toEqual({});
+    });
+
+    describe('mergeProps', () => {
+      let mergedProps;
+      let dispatchProps;
+
+      beforeEach(() => {
+        dispatchProps = {
+          dispatch: jest.fn(),
+        };
+        mergedProps = mergeProps(stateProps, dispatchProps);
+      });
+
+      it('generates the correct props', () => {
+        expect(mergedProps).toEqual({});
+      });
+    });
+  });
+});

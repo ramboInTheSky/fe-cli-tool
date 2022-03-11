@@ -1,0 +1,14 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+import connect from './connect';
+
+export class {{ name }} extends Component {
+  render() {
+    return <div>{{ name }} Composition</div>;
+  }
+}
+
+{{ name }}.propTypes = {};
+
+export default connect({{ name }});

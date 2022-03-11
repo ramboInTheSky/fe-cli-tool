@@ -1,0 +1,8 @@
+import reducer, { initialState } from './';
+
+describe('{{ name }} duck', () => {
+  it('should set the initial state', () => {
+    const result = reducer(undefined, {});
+    expect(result).toEqual(initialState);
+  });
+});
